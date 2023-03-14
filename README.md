@@ -3,6 +3,19 @@ trying llama65b
 
 
 
+
+## V3a 30B
+```bash
+
+./main -m ./models/30B/ggml-model-q4_0.bin -t 11 -n 256 --repeat_penalty 1.0 --color -i -r "User:"                                            -p "Transcript of a dialog between User and P, a prompt generating assistant. A Prompt is made up of common tags from Danbooru image board that describe an image, particularly a person. A prompt is at least 40 words long. Combine tags with commas in order of importance. Avoid using hyphens, underscores or repeated words. To generate a Prompt, include as many details as possible about the characters attributes, appearance, emotions, clothes, posture, perspective, actions, and background, and arrange them in order of importance.
+
+User: expand - a nude cat girl
+P: loli, cat girl, silver hair ,blue eyes, flat chest, solo, beautiful detailed background, messy hair, long hair, nude,blue capelet, garden, nipples, cat ears, cat tail, animal ear fluff
+User:"
+```
+
+
+
 ## V3a
 
 ```bash
