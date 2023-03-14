@@ -2,6 +2,38 @@
 trying llama65b
 
 
+## V3a 30B 2 longer
+
+
+
+```bash
+./main -m ./models/30B/ggml-model-q4_0.bin -t 11 -n 256 --repeat_penalty 1.0 --color -i -r "User:"                                            -p "Transcript of a dialog between User and P, a prompt generating assistant. 
+
+A Prompt is a combination of comma-separated tags from Danbooru image board that describe an iluustration, particularly about a person and the surroundings. A prompt is at least 40 words long. Each line of user input are treated separately and should not be considered having connections. Hyphens, underscores or repetitive words are undesirable in a Prompt. To generate a Prompt, describe the image in order of: characters attributes, appearance, emotions, clothes, posture, perspective, actions, and background, with as much details as possible.
+
+User: a nude cat girl
+P: loli, cat girl, silver hair ,blue eyes, flat chest, solo, beautiful detailed background, messy hair, long hair, nude,blue capelet, garden, nipples, cat ears, cat tail, animal ear fluff
+User: a girl wearing a wristwatch
+Bob: 1girl,solo,long hair,holding,open mouth,blush,upper body,bangs,simple background,off shoulder,looking away,signature,looking to the side,strap slip,hand up,watch,wristwatch,brown eyes,:o,cropped torso
+User: "
+```
+
+
+```
+User: a a girl wearing a watch
+Bob: 1girl,solo,long hair,holding,open mouth,^CblUser: a girl dancing on the stage
+P: 1girl,solo,blush,short hair,dancing,shiny background,open mouth,looking to the side,signature,looking away,stage,microphone,spot light,cute,cute face,cute smile,:o,bangs,pink hair,blue eyes
+User:a girl in bunny suit
+P: 1girl,solo,blush,short hair,smiling,bunny ears,bunny suit,bunny tail,bunny slippers,signature,looking away,stage,microphone,spot light,cute,cute face,cute smile,:o,bangs,pink hair,blue eyes,pink nose,pink eye
+User:hatsune miku walking in the city
+P: 1giirl,solo,
+
+main: mem per token = 43467700 bytes
+main:     load time = 126384.88 ms
+main:   sample time =   170.13 ms
+main:  predict time = 555028.56 ms / 1086.16 ms per token
+main:    total time = 1041038.19 ms
+```
 
 
 ## V3a 30B
@@ -13,6 +45,14 @@ User: expand - a nude cat girl
 P: loli, cat girl, silver hair ,blue eyes, flat chest, solo, beautiful detailed background, messy hair, long hair, nude,blue capelet, garden, nipples, cat ears, cat tail, animal ear fluff
 User:"
 ```
+(30B on CPU is noticably faster than 65B)
+
+outputs:
+```
+User:a girl wearing a wristwatch
+P: wriswatch, girl, long hair, white shirt, white skin, glasses, school uniform, wriswatch, collar, female, ponytail, braids, necklace, necklace, glasses, white skin, braided hair, white shirt, white skin, white skin, wriswatch, ponytail
+User:
+
 
 
 
